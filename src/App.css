@@ -33,6 +33,10 @@ div {
   margin: 0 auto;
   background-color:lightskyblue  
 }
+span {
+  display: inline-block;
+  width: 130px;
+}
 
 @media screen and (max-width: 600px) {
   div {
