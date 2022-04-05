@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import Storage from "./Storage";
 
-
-
 const App = () => {
 
   const tShirts = [
@@ -65,7 +63,6 @@ const App = () => {
 
   const [totaIncome, setTotalIncome] = useState(0);  
 
-
   const allTshirts = tShirts.map((item) => <Storage key={item.id} item={item} />);
 
   const handleTotalIncome = () => {
@@ -74,7 +71,6 @@ const App = () => {
     setTotalIncome(total);
     
   };
-  
   return (
     <div>
       <h1>Sprzedaż t-shirt'ów</h1>

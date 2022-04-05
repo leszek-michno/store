@@ -3,11 +3,11 @@ import React, { useState } from "react";
 const Storage = ({item}) => {
   const [tS, setTS] = useState(item.initialState * 1);
   const [soldNumber, setSoldNumber] = useState("");
+
   const sold = (e) => setSoldNumber(e.target.value);
 
   const handleChange = () => {
     if (tS >= soldNumber) {
-  
       setTS(tS - soldNumber);
       setSoldNumber("");
     }
