@@ -8,31 +8,31 @@ const App = () => {
     {
       id: 1,
       type: "damska XS",
-      initialState: 12,
+      initialState: 19,
       income: "",
     },
     {
       id: 2,
       type: "damska S",
-      initialState: 10,
+      initialState: 20,
       income: "",
     },
     {
       id: 3,
       type: "damska M",
-      initialState: 8,
+      initialState: 13,
       income: "",
     },
     {
       id: 4,
       type: "damska L",
-      initialState: 12,
+      initialState: 4,
       income: "",
     },
     {
       id: 5,
       type: "męska S",
-      initialState: 10,
+      initialState: 5,
       income: "",
     },
     {
@@ -44,13 +44,13 @@ const App = () => {
     {
       id: 7,
       type: "męska L",
-      initialState: 10,
+      initialState: 20,
       income: "",
     },
     {
       id: 8,
       type: "męska XL",
-      initialState: 8,
+      initialState: 16,
       income: "",
     },
     {

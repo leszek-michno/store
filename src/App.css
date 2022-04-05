@@ -31,7 +31,7 @@ h1 {
 div { 
   width:600px;
   margin: 0 auto;
-  
+  background-color:lightskyblue  
 }
 
 @media screen and (max-width: 600px) {
