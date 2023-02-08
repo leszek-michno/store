@@ -1,0 +1,67 @@
+{
+  "tshirts": [
+    {
+      "id": 1,
+      "type": "damska XS",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 2,
+      "type": "damska S",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 3,
+      "type": "damska M",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 4,
+      "type": "damska L",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 5,
+      "type": "męska S",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 6,
+      "type": "męska M",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 7,
+      "type": "męska L",
+      "initialState": 10,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 8,
+      "type": "męska XL",
+      "initialState": 0,
+      "stateNow": 0,
+      "income": ""
+    },
+    {
+      "id": 9,
+      "type": "męska XXL",
+      "initialState": 0,
+      "stateNow": 0,
+      "income": ""
+    }
+  ]
+}

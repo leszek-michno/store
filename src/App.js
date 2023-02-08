@@ -1,84 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import "./App.css";
 import Storage from "./Storage";
 
-const App = () => {
+const App = (props) => {
 
-  const tShirts = [
-    {
-      id: 1,
-      type: "damska XS",
-      initialState: 19,
-      income: "",
-    },
-    {
-      id: 2,
-      type: "damska S",
-      initialState: 20,
-      income: "",
-    },
-    {
-      id: 3,
-      type: "damska M",
-      initialState: 13,
-      income: "",
-    },
-    {
-      id: 4,
-      type: "damska L",
-      initialState: 4,
-      income: "",
-    },
-    {
-      id: 5,
-      type: "męska S",
-      initialState: 5,
-      income: "",
-    },
-    {
-      id: 6,
-      type: "męska M",
-      initialState: 8,
-      income: "",
-    },
-    {
-      id: 7,
-      type: "męska L",
-      initialState: 20,
-      income: "",
-    },
-    {
-      id: 8,
-      type: "męska XL",
-      initialState: 16,
-      income: "",
-    },
-    {
-      id: 9,
-      type: "męska XXL",
-      initialState: 4,
-      income: "",
-    },
-  ];
+  
+
+  const[tshirt, setTshirt] = useState([])
+  // const [upDataState, setUpDataState] = useState(0);
+
+    useEffect(()=>{
+        axios.get('http://localhost:4000/tshirts')
+        .then(res => {
+            console.log(res);
+            setTshirt(res.data)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }, [])
 
   const [totaIncome, setTotalIncome] = useState(0);  
 
-  const allTshirts = tShirts.map((item) => <Storage key={item.id} item={item} />);
+  const allTshirts = tshirt.map((item) => <Storage key={item.id} item={item} />);
 
   const handleTotalIncome = () => {
-    const allIncomes = tShirts.map((item) => item.income);
+    const allIncomes = tshirt.map((item) => item.income);
     const total = allIncomes.reduce((a, b) => a + b, 0)
     setTotalIncome(total);
-    
+   
+
   };
+  
   return (
     <div>
       <h1>Sprzedaż t-shirt'ów</h1>
       <hr />
       {allTshirts}
       <button onClick={handleTotalIncome}>Podsumowanie</button>
-      <span> Razem: <strong>{totaIncome}</strong> zł</span><br />
-      <button onClick={window.print}>Zapamiętaj</button>
+      <span> Razem: <strong>{totaIncome}</strong> zł</span><br/>
+      {/* <p>{upDataState}</p> */}
     </div>
   );
 };
